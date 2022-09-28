@@ -32,3 +32,11 @@ And to see debugging output, use this ... and have patience to wait:
 ```sh
 rcc run --dev --task fail
 ```
+
+## Running examples on Windows
+
+There you need to add `--robot robot_win.yaml` into all command lines. Like
+
+```sh
+rcc run --robot robot_win.yaml --task pass
+```

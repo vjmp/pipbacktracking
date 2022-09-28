@@ -1,0 +1,19 @@
+tasks:
+  pass:
+    shell: user_flow.cmd pass
+  fail:
+    shell: user_flow.cmd fail
+
+devTasks:
+  pass:
+    shell: debug_flow.cmd pass
+  fail:
+    shell: debug_flow.cmd fail
+
+condaConfigFile: conda.yaml
+artifactsDir: temp
+PATH:
+  - bin
+PYTHONPATH:
+ignoreFiles:
+  - .gitignore
