@@ -1,0 +1,2 @@
+pywebview[qt]==3.6.3
+rpaframework==15.6.0
