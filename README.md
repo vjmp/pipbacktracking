@@ -1,5 +1,10 @@
 # Example of pip backtracking failure
 
+## Repo for this example
+
+... can be found there: https://github.com/vjmp/pipbacktracking
+and issues can be found there: https://github.com/pypa/pip/issues
+
 ## Failing case description
 
 Installing (internally conflicting) "requirements.txt" which has lots of
