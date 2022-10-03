@@ -11,6 +11,8 @@ pywebview[qt]==3.6.2
 rpaframework==15.6.0
 ```
 
+This will take long time to fail, like 4+ hours.
+
 And note that this specific example applies only on Linux environments.
 But I think problem is general, and "old, previously working" requirement sets
 can get "rotten" over time, as dependency "future" takes "wrong" turn. This
@@ -28,7 +30,7 @@ Here are some things, that make this problem to Robocorp customers.
   failure"
 - automation is setting up environment, not humans
 - our tooling for automation in our `rcc` which is used here to also make this
-  repeatable process
+  failure as repeatable process
 - and general context for automation is RPA (robotic process automation) so
   processes should be repeatable and reliable and not break, even if time passes
 
@@ -76,6 +78,9 @@ kill old pip version commands, but CLI option will).
 What is needed:
 
 - a linux machine
+- content of repo containing this README.md file
+- rcc executable (optional, but useful, and if you have it, you don't have
+  to manually install following two things ...)
 - python3, in our case we have tested 3.9.13
 - pip, in our case we have tested 22.1.2 (but mostly anything after 20.3 has
   this feature; this current example uses pip v22.2.2)
