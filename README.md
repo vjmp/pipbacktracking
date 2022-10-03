@@ -27,6 +27,10 @@ Here are some things, that make this problem to Robocorp customers.
   in monetary terms than "fail 4+ hours later on total environment build
   failure"
 - automation is setting up environment, not humans
+- our tooling for automation in our `rcc` which is used here to also make this
+  repeatable process
+- and general context for automation is RPA (robotic process automation) so
+  processes should be repeatable and reliable and not break, even if time passes
 
 ## Problem with backtracking
 
@@ -47,14 +51,19 @@ becomes 100% busy for backtracking work.
 
 ### In automation, there is no "human" to press "Control-C".
 
+> INFO: pip is looking at multiple versions of selenium to determine which
+> version is compatible with other requirements. This could take a while.
+
+and ...
+
 > INFO: This is taking longer than usual. You might need to provide the
 > dependency resolver with stricter constraints to reduce runtime.
 > See https://pip.pypa.io/warnings/backtracking for guidance.
 > If you want to abort this run, press Ctrl + C.
 
-It is nice for `pip` to inform user that it is taking longer than usual, but
-it for our customers automation cases, there is nobody who could see that or
-press that "Ctrl + C".
+... are nice for `pip` to inform user that it is taking longer than usual, but
+in our customers automation cases, there is nobody who could see those, or
+to press that "Ctrl + C".
 
 This could be improved, if there would be environment variable like
 `MAX_PIP_RESOLUTION_ROUNDS` instead of having hard coded 2000000 internal limit.
