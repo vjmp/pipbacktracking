@@ -3,7 +3,7 @@
 ## Repo for this example
 
 ... can be found there: https://github.com/vjmp/pipbacktracking
-and issues can be found there: https://github.com/pypa/pip/issues
+and issue can be found there: https://github.com/pypa/pip/issues/11480
 
 ## Failing case description
 
