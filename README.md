@@ -11,6 +11,12 @@ pywebview[qt]==3.6.2
 rpaframework==15.6.0
 ```
 
+And note that this specific example applies only on Linux environments.
+But I think problem is general, and "old, previously working" requirement sets
+can get "rotten" over time, as dependency "future" takes "wrong" turn. This
+is because resolver works from latest to oldest, and even one few versions of
+some required dependencies can derail resolver into backtracking "mode".
+
 ## Context of our problem space.
 
 Here are some things, that make this problem to Robocorp customers.
@@ -52,7 +58,9 @@ press that "Ctrl + C".
 
 This could be improved, if there would be environment variable like
 `MAX_PIP_RESOLUTION_ROUNDS` instead of having hard coded 2000000 internal limit.
-Also adding this as environment variable (instead of configur
+Also adding this as environment variable (instead of command line option is
+better backwards compatibility, since "extra" environment variable does not
+kill old pip version commands, but CLI option will).
 
 ## Basic setup
 
